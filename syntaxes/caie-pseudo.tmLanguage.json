@@ -1,0 +1,57 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Unofficial CAIE ALevel Pseudocode Syntax Highlight",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#operator"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [
+
+			{
+				"name": "keyword.control.flow.caie-pseudo",
+				"match": "\\b(IF|ELSE|ENDIF|WHILE|ENDWHILE|FOR|ENDFOR|RETURN|TYPE|ENDTYPE|CASE|ENDCASE|REPEAT|PROCEDURE|ENDPROCEDURE|FUNCTION|ENDFUNCTION)\\b"
+			},
+			{
+				"name": "keyword.operator.caie-pseudo",
+				"match": "[+\\-*:=<>\\!]|(<-)|(?<!\\/)\\/(?!\\/)|OF|OR|TO|DO|THEN|OTHERWISE|UNTIL"
+			},
+			
+			{
+				"name": "support.function.caie-pseudo",
+				"match": "\\b(OPENFILE|CLOSEFILE|EOF|READFILE|WRITEFILE|PUTRECORD|GETRECORD|SEEK|INPUT|OUTPUT|DECLARE|CONSTANT)\\b"
+			},
+			{
+				"name": "keyword.datatype.caie-pseudo",
+				"match": "\\b(STRING|INTEGER|CHAR|BOOLEAN|BOOL|RANDOM|REAL|FLOAT|INT|DATE|ARRAY)\\b"
+			},
+			{
+				"name":"comment.line",
+				"match": "\/\/(.*)"
+			}
+			
+		
+		]
+		},
+		"strings": {
+			"name": "string.quoted.double.caie-pseudo",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.caie-pseudo",
+					"match": "\\\\."
+				}
+			]
+		}
+	},
+	"scopeName": "source.pseu"
+}

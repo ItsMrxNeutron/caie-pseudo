@@ -1,0 +1,25 @@
+{
+  "name": "caie-pseudocode-highlight",
+  "displayName": "Unofficial CAIE ALevel Pseudocode Syntax Highlight",
+  "description": "An unofficial syntax highlighter for CAIE A Level Computer Science",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.76.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "caie-pseudo",
+      "aliases": ["Unofficial CAIE ALevel Psuedocode Syntax Highlight", "caie-pseudo"],
+      "extensions": [".pseu"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "caie-pseudo",
+      "scopeName": "source.pseu",
+      "path": "./syntaxes/caie-pseudo.tmLanguage.json"
+    }]
+  }
+}
