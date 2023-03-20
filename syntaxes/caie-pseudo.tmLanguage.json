@@ -27,7 +27,7 @@
 			
 			{
 				"name": "support.function.caie-pseudo",
-				"match": "\\b(OPENFILE|CLOSEFILE|EOF|READFILE|WRITEFILE|PUTRECORD|GETRECORD|SEEK|INPUT|OUTPUT|DECLARE|CONSTANT)\\b"
+				"match": "\\b(OPENFILE|CLOSEFILE|EOF|READFILE|WRITEFILE|PUTRECORD|GETRECORD|SEEK|INPUT|OUTPUT|DECLARE|CONSTANT|HASH|READ|WRITE)\\b"
 			},
 			{
 				"name": "keyword.datatype.caie-pseudo",
